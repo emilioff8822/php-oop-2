@@ -46,14 +46,18 @@ $arrayProdotti=[
               <?php echo $prodotto->getRazza() ?>, Tipo: <?php echo $prodotto->tipo ?> </p>
             <p class="card-text">Marca: <?php echo $prodotto->marca ?> </p>
             <p class="card-text">Prezzo: <?php echo $prodotto->prezzo ?>€</p>
-            <p class="card-text">Ingredienti:
 
+            <?php if (!empty($prodotto->ingredienti)): ?>
+            <p class="card-text">Ingredienti:
             <ul>
               <?php foreach ($prodotto->ingredienti as $ingrediente): ?>
               <li><?php echo $ingrediente; ?></li>
               <?php endforeach; ?>
             </ul>
             </p>
+            <?php endif; ?>
+
+
             <?php if (!empty($prodotto->materiali)): ?>
             <p class="card-text">Materiali:
             <ul>

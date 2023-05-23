@@ -4,7 +4,7 @@ include_once __DIR__ .'/models/Cane.php';
 include_once __DIR__ .'/models/Gatto.php';
 include_once __DIR__ .'/models/Prodotto.php';
 
-$cuccia = new Prodotto('Cuccia per cani', 'Ferplast', 45.00, 'Cuccia', new Cane('Cane', 'Bulldog'), 'https://shop-cdn-m.mediazs.com/bilder/cuccia/per/cani/ferplast/dogvilla/3/400/4_top_seller_1000x1000_3.jpg', [], ['Legno' , 'Truciolato']);
+$cuccia = new Prodotto('Cuccia per cani', 'Ferplast', 45.00, 'Cuccia', new Cane('Cane', 'Piccola taglia'), 'https://shop-cdn-m.mediazs.com/bilder/cuccia/per/cani/ferplast/dogvilla/3/400/4_top_seller_1000x1000_3.jpg', [], ['Legno' , 'Truciolato']);
 
 
 $arrayProdotti=[
@@ -38,6 +38,7 @@ $arrayProdotti=[
       <?php foreach ($arrayProdotti as $prodotto): ?>
       <div class="col-4">
         <div class="card">
+
           <img class="card-img-top" src="<?php echo $prodotto->immagine ?>" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><?php echo $prodotto->nome ?></h5>
@@ -46,6 +47,7 @@ $arrayProdotti=[
             <p class="card-text">Marca: <?php echo $prodotto->marca ?> </p>
             <p class="card-text">Prezzo: <?php echo $prodotto->prezzo ?>€</p>
             <p class="card-text">Ingredienti:
+
             <ul>
               <?php foreach ($prodotto->ingredienti as $ingrediente): ?>
               <li><?php echo $ingrediente; ?></li>

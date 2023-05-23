@@ -5,9 +5,9 @@ include_once __DIR__ .'/models/Gatto.php';
 include_once __DIR__ .'/models/Prodotto.php';
 
 $arrayProdotti=[
-    new Prodotto('Cibo per cani', 'Pedigree', 10.99, 'Cibo', new Cane('Cane', 'Labrador'), 'https://picsum.photos/id/237/200/300'),
-    new Prodotto('Cibo per gatti', 'Whiskas', 8.99, 'Cibo', new Gatto('Gatto', 'Siamese'), 'https://picsum.photos/id/1025/200/300'),
-    new Prodotto('Cuccia per cani', 'Ferplast', 45.00, 'Cuccia', new Cane('Cane', 'Bulldog'), 'https://picsum.photos/id/433/200/300'),
+    new Prodotto('Cibo per cani', 'Pedigree', 10.99, 'Cibo', new Cane('Cane', 'Labrador'), 'https://shop-cdn-m.mediazs.com/bilder/fai/scorta/pedigree/adult/classic/x/g/umido/cane/1/800/612758_pedigree_classic_24x400g_1.jpg'),
+    new Prodotto('Cibo per gatti', 'Whiskas', 8.99, 'Cibo', new Gatto('Gatto', 'Siamese'), 'https://images.eprice.it/nobrand/0/Lightbox/462/202927462/BEFC0587-E47B-41C6-B169-41EF2C94FDEF.jpg'),
+    new Prodotto('Cuccia per cani', 'Ferplast', 45.00, 'Cuccia', new Cane('Cane', 'Bulldog'), 'https://shop-cdn-m.mediazs.com/bilder/cuccia/per/cani/ferplast/dogvilla/3/400/4_top_seller_1000x1000_3.jpg'),
 ];
 
 ?>

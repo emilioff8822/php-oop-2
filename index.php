@@ -1,6 +1,8 @@
 <?php
-include_once __DIR__ .'/models/Categoria.php';
+include_once __DIR__ .'/models/Cane.php';
+include_once __DIR__ .'/models/Gatto.php';
 include_once __DIR__ .'/models/Prodotto.php';
+
 
 
 

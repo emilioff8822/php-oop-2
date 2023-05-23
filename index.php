@@ -15,15 +15,33 @@ $arrayProdotti=[
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
-    <title>PHP OOP</title>
-  </head>
-  <body>
-  <div class="container my-5">
-  
-  </body>
+    <title>Shop online di prodotti per animali</title>
+</head>
+<body>
+<div class="container my-5">
+    <h1>Shop di prodotti per animali</h1>
+    <div class="row">
+        <?php foreach ($arrayProdotti as $prodotto): ?>
+        <div class="col-4">
+            <div class="card">
+
+                <img class="card-img-top" src="<?php echo $prodotto->immagine ?>" alt="Card image cap">
+                <div class="card-body">
+                    
+                <h5 class="card-title"><?php echo $prodotto->nome ?></h5>
+                    <p class="card-text">Categoria: <?php echo $prodotto->getCategoria() ?>, Razza: <?php echo $prodotto->getRazza() ?>, Tipo: <?php echo $prodotto->tipo ?> </p>
+                    <p class="card-text">Marca: <?php echo $prodotto->marca ?> </p>
+                    <p class="card-text">Prezzo: <?php echo $prodotto->prezzo ?>€</p>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+</body>
 </html>
